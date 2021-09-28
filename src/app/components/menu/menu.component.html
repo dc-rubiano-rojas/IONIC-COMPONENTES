@@ -1,0 +1,22 @@
+<!-- menuId habilito y desabilito otrs menu  -->
+<!-- contentId este id se lo paso al <ion -router-outlet> -->
+<ion-menu side="start" menuId="primerMenu" contentId="principal">
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>Menú Componentes</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+
+            <!-- Para hacer que cuando de click en el menu y se cierre  <ion-menu-toggle> -->
+            <ion-menu-toggle *ngFor="let c of componentes | async">
+                <ion-item [routerLink]="c.redirectTo">
+                    <ion-icon slot="start" [name]="c.icon"></ion-icon>
+                    <ion-label> {{c.name}}</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+
+        </ion-list>
+    </ion-content>
+</ion-menu>

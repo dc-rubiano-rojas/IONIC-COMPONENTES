@@ -1,0 +1,16 @@
+<!-- || dice que si mi variable titulo es nulo o no existe envie 'alert page' -->
+<app-header [titulo]="titulo || 'alert page'"></app-header>
+
+
+<ion-content>
+
+    <ion-button color="primary" expand="full" (click)="presentAlert()">
+        Mostrar Alerta
+    </ion-button>
+
+
+    <ion-button color="secondary" expand="full" (click)="presentInput()">
+        Mostrar Input
+    </ion-button>
+
+</ion-content>
